@@ -8,11 +8,13 @@ public class Elephant extends Animal {
 
     @Override
     public String makeSound() {
-        return "Growl";
+        return "Trumpet";
     }
 
     @Override
-    public String displayDetails(){
-        return "These are the details";
+    public String displayDetails() {
+        return "Name: " + name + "\n" +
+                "Type: " + type + "\n" +
+                "Sound: " + makeSound() + "\n";
     }
 }
