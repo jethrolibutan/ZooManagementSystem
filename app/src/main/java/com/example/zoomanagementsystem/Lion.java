@@ -11,7 +11,9 @@ public class Lion extends Animal{
     }
 
     @Override
-    public String displayDetails(){
-        return "These are the details";
+    public String displayDetails() {
+        return "Name: " + name + "\n" +
+                "Type: " + type + "\n" +
+                "Sound: " + makeSound() + "\n";
     }
 }
