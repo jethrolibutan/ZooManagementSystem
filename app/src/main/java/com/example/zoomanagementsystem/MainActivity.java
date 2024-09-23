@@ -7,11 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import com.example.zoomanagementsystem.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView textViewAnimalName;
     private TextView textViewAnimalDetails;
 
     @Override
@@ -19,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textViewAnimalName = findViewById(R.id.textViewAnimalName);
         textViewAnimalDetails = findViewById(R.id.textViewAnimalDetails);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -33,10 +30,10 @@ public class MainActivity extends AppCompatActivity {
         Animal animal;
         switch (view.getId()) {
             case R.id.buttonLion:
-                animal = new Lion("Simba", "Carnivore");
+                animal = new Lion("Simba", "Lion");
                 break;
             case R.id.buttonElephant:
-                animal = new Elephant("Dumbo", "Herbivore");
+                animal = new Elephant("Dumbo", "Elephant");
                 break;
             default:
                 return;
@@ -45,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void displayAnimalDetails(Animal animal) {
-        textViewAnimalName.setText(animal.name);
         textViewAnimalDetails.setText(animal.displayDetails());
     }
 }
