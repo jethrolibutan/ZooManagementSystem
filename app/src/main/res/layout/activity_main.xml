@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:id="@+id/main"> <!-- This matches the 'main' id used in the MainActivity.java -->
 
+    <!-- Button to display Lion details -->
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Show Elephant Details"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.366" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Animal Details"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.087" />
-
-    <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonLion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Show Lion Details"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.199" />
+        android:onClick="onAnimalButtonClick" /> <!-- This matches the onClick method in MainActivity.java -->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Button to display Elephant details -->
+    <Button
+        android:id="@+id/buttonElephant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Elephant Details"
+        android:onClick="onAnimalButtonClick"
+        android:layout_marginTop="16dp"
+    /> <!-- Adds some space between the two buttons -->
+
+
+    <TextView
+        android:id="@+id/textViewAnimalName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Animal Name"
+        android:textSize="18sp"
+        android:layout_marginTop="24dp" /> <!-- Adds some space between the button and text -->
+
+    <!-- TextView to display Animal Details -->
+    <TextView
+        android:id="@+id/textViewAnimalDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Animal Details"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" /> <!-- Adds some space between the name and details -->
+</LinearLayout>

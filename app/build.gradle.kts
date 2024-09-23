@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.application) // Ensure this is defined in the version catalog
 }
 
 android {
@@ -32,7 +32,7 @@ android {
 }
 
 dependencies {
-
+    // Check that these aliases are correctly defined in your version catalog
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
